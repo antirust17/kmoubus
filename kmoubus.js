@@ -1,21 +1,19 @@
 window.onload=function funcKMOUBUS(){
-	now = new Date();
-	nowYear = now.getFullYear();
-	nowMonth = now.getMonth() + 1;
-	nowDay = now.getDate();
-	nowHour = now.getHours();
-	nowMin = now.getMinutes();
-	nowSec = now.getSeconds();
-	nowWeek = now.getDay();
+	var now = new Date();
+	var nowYear = now.getFullYear();
+	var nowMonth = now.getMonth() + 1;
+	var nowDay = now.getDate();
+	var nowHour = now.getHours();
+	var nowMin = now.getMinutes();
+	var nowSec = now.getSeconds();
+	var nowWeek = now.getDay();
 	nowWeekText = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
 
-	//아래 4줄은 쓰레기이나 삭제시 오류 발생
-	nowOnlyTime = now;
-	nowOnlyTime.setFullYear(arr1[1].getFullYear());
-	nowOnlyTime.setMonth(arr1[1].getMonth());
-	nowOnlyTime.setDate(arr1[1].getDate());
+	now.setFullYear(arr1[1].getFullYear());
+	now.setMonth(arr1[1].getMonth());
+	now.setDate(arr1[1].getDate());
 	
-	nowVacation = true; //방학일경우 true, 학기중이면 false
+	var nowVacation = true; //방학일경우 true, 학기중이면 false
 
 	//순환버스용 요일, 방학 여부 판단
 	if (nowWeek == 0 || nowWeek == 6) {
