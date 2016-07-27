@@ -79,12 +79,10 @@ window.onload=function funcKMOUBUS(){
 	for (i=0;i<document.getElementsByClassName("next190Remaining").length;i++)
 		document.getElementsByClassName("next190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop].getTime() - now.getTime()) / 60000 )  ;
 
-	//그 다음 190번 시내버스 출발시간 출력
-	
+	//그 다음 190번 시내버스 출발시간 출력	
 	for (i=0;i<document.getElementsByClassName("nNext190").length;i++)
 		document.getElementsByClassName("nNext190")[i].innerHTML = addZero(arr190[cityLoop+1].getHours()) + ":" + addZero(arr190[cityLoop+1].getMinutes()) ;
 	//그 다음 190번 시내버스 출발까지 남은시간 출력
-	
 	for (i=0;i<document.getElementsByClassName("nNext190Remaining").length;i++)
 		document.getElementsByClassName("nNext190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop+1].getTime() - now.getTime()) / 60000 )  ;
 	
