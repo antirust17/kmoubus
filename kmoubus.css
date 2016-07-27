@@ -19,13 +19,18 @@ nav ul li {
 }
 
 footer {
-    background: white;
+    background: gray;
     color: black;
     text-align: center;
     position:fixed;
     width: 100%;
     top:100%;
-    margin-top:-1em;
+    height: 2em;
+    margin-top: -2em;
+}
+
+footer i {
+        vertical-align: -35%;
 }
 
 h1 {
