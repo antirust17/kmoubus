@@ -1,3 +1,7 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+    font-family: 'Nanum Gothic', serif;
+}
 .kmoubus-header {
     width: 100%;
     background: red;
@@ -6,4 +10,33 @@
     top: 0px;
     left: 0px;
     margin-bottom: 15px;
+}
+
+.kmoubus-circle {
+    margin: 10px auto 10px auto;
+
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:gray;
+    
+    text-align:center;
+   
+
+    
+    color:white;
+}
+
+.shadow {
+    text-shadow: 1px 1px 4px black;
+}
+div.kmoubus-circle h1 {
+    line-height: 00%;
+    font-size:4em;
+    letter-spacing: -2.5px;
+}
+
+small {
+    font-size:0.25em;
+    vertical-align:1em;
 }
