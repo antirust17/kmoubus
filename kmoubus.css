@@ -4,27 +4,28 @@ body {
 }
 .kmoubus-header {
     width: 100%;
-    background: red;
+    background: gray;
     text-align: right;
     position: fixed;
     top: 0px;
     left: 0px;
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 
 .kmoubus-circle {
     margin: 10px auto 10px auto;
-
     width:300px;
     height:300px;
     border-radius:50%;
     background:gray;
-    
-    text-align:center;
-   
-
-    
     color:white;
+    display:table;
+}
+
+.kmoubus-circle-inner {
+    text-align: center;
+    vertical-align: middle;
+    display:table-cell;
 }
 
 .shadow {
@@ -33,7 +34,7 @@ body {
 div.kmoubus-circle h1 {
     line-height: 00%;
     font-size:4em;
-    letter-spacing: -2.5px;
+    letter-spacing: -2px;
 }
 
 small {
