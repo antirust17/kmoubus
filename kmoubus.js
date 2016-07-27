@@ -1,4 +1,4 @@
-function funcKMOUBUS(){
+window.onload=function funcKMOUBUS(){
 	now = new Date();
 	nowYear = now.getFullYear();
 	nowMonth = now.getMonth() + 1;
