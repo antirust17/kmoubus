@@ -9,6 +9,7 @@ window.onload=function funcKMOUBUS(){
 	var nowWeek = now.getDay();
 	nowWeekText = ["일요일","월요일","화요일","수요일","목요일","금요일","토요일"];
 
+	//date varable의 할당 문제. http://stackoverflow.com/questions/6609574/javascript-date-variable-assignment 참고
 	now.setFullYear(arr1[1].getFullYear());
 	now.setMonth(arr1[1].getMonth());
 	now.setDate(arr1[1].getDate());
