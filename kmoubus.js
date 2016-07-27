@@ -72,21 +72,21 @@ window.onload=function funcKMOUBUS(){
 		document.getElementsByClassName("nNextShuttleRemaining")[i].innerHTML = Math.floor( (arrShuttle[shuttleLoop+1].getTime() - now.getTime()) / 60000 )  ;
 
 	//다음 190번 시내버스 출발시간 출력
-	for (i=0;i<document.getElementsByClassName("nextCity").length;i++)
-		document.getElementsByClassName("nextCity")[i].innerHTML = addZero(arr190[cityLoop].getHours()) + ":" + addZero(arr190[cityLoop].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("next190").length;i++)
+		document.getElementsByClassName("next190")[i].innerHTML = addZero(arr190[cityLoop].getHours()) + ":" + addZero(arr190[cityLoop].getMinutes()) ;
 	
 	//다음 190번 시내버스 출발까지 남은시간 출력
-	for (i=0;i<document.getElementsByClassName("nextCityRemaining").length;i++)
-		document.getElementsByClassName("nextCityRemaining")[i].innerHTML = Math.floor( (arr190[cityLoop].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("next190Remaining").length;i++)
+		document.getElementsByClassName("next190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop].getTime() - now.getTime()) / 60000 )  ;
 
 	//그 다음 190번 시내버스 출발시간 출력
 	
-	for (i=0;i<document.getElementsByClassName("nNextCity").length;i++)
-		document.getElementsByClassName("nNextCity")[i].innerHTML = addZero(arr190[cityLoop+1].getHours()) + ":" + addZero(arr190[cityLoop+1].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("nNext190").length;i++)
+		document.getElementsByClassName("nNext190")[i].innerHTML = addZero(arr190[cityLoop+1].getHours()) + ":" + addZero(arr190[cityLoop+1].getMinutes()) ;
 	//그 다음 190번 시내버스 출발까지 남은시간 출력
 	
-	for (i=0;i<document.getElementsByClassName("nNextCityRemaining").length;i++)
-		document.getElementsByClassName("nNextCityRemaining")[i].innerHTML = Math.floor( (arr190[cityLoop+1].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("nNext190Remaining").length;i++)
+		document.getElementsByClassName("nNext190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop+1].getTime() - now.getTime()) / 60000 )  ;
 	
 	//0.5초마다 갱신
 	setTimeout(funcKMOUBUS, 500);
