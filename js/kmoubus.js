@@ -1,4 +1,9 @@
-window.onload=function funcKMOUBUS(){
+window.onload = function() {
+	funcKMOUBUS();
+	kmoubusLoadTable();
+}
+
+function funcKMOUBUS(){
 	now = new Date();
 	nowYear = now.getFullYear();
 	nowMonth = now.getMonth() + 1;
@@ -87,4 +92,6 @@ function addZero(i){//숫자 두 자리 표기를 위함
 }
 
 
-
+function kmoubusLoadTable(){
+	document.getElementById("kmoubus-table").innerHTML='source';
+}
