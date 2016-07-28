@@ -85,3 +85,6 @@ function addZero(i){//숫자 두 자리 표기를 위함
 	if (i < 10) {i = "0" + i};
 	return i;
 }
+
+
+

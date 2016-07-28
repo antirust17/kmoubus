@@ -3,10 +3,10 @@
 <head>
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="kmoubus.css">
+	<link rel="stylesheet" href="css/kmoubus.css">
 	<title>KMOUBUS</title>
 </head>
-<body>
+<body onload="loadDoc('test.html')">
 	<div id="kmoubus-header" >
 		<span class="nowTime"></span> | 다음 순환버스 <span class="nextShuttleRemaining"></span>분 남음 | 다음 190번 시내버스 <span class=next190Remaining></span>분 남음
 	</div>
@@ -44,27 +44,29 @@
 
 <!--아래의 클래스 이름을 사용-->
 	<div id="loadTest">
-		<ul>
-			<li class="nowTime"></li>
-			<li class="nextShuttle"></li>
-			<li class="nextShuttleRemaining"></li>
-			<li class="nNextShuttle"></li>
-			<li class="nNextShuttleRemaining"></li>
-			<li class="next190"></li>
-			<li class="next190Remaining"></li>
-			<li class="nNext190"></li>
-			<li class="nNext190Remaining"></li>
-		</ul>
+		
 	</div>
 
 	<footer><p><i>- 위 정보는 한국해양대학교 홈페이지의 버스 시간표를 참고하였으며,
 		실제 운행과 다를 수 있습니다. KMOU 버스 도우미에서 제공하는 정보를 사용하여
 		발생하는 모든 결과에 대한 책임은 이용자 본인에게 있습니다. - </i></p></footer>
-
+<!--div에 html 로드//현재 작동 안 함-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		function loadDoc(url) {
+			var xhttp = new XMLHttpRequest();
+			xhttp.onreadystatechange = function() {
+				if (xhttp.readyState == 4 && xhttp.status == 200) {
+					document.getElementById("loadTest").innerHTML = xhttp.responseText;
+				}
+			};
+			xhttp.open("GET", url, true);
+			xhttp.send();
+		}
+	</script>
 <!--KMOUBUS에 필요한 스크립트-->
-	<script src="timeArray.js"></script>
-	<script src="kmoubus.js"></script>
-
+	<script src="js/timeArray.js"></script>
+	<script src="js/kmoubus.js"></script>
 
 </body>
 </html>
