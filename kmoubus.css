@@ -41,7 +41,7 @@ a:visited {text-decoration: none; color: #999999;}
 a:active {text-decoration: none; color: #999999;}
 a:hover {text-decoration: underline; color: white;}
 
-.kmoubus-header {
+#kmoubus-header {
     width: 100%;
     background: gray;
     color: white;

@@ -7,7 +7,7 @@
 	<title>KMOUBUS</title>
 </head>
 <body>
-	<div class="kmoubus-header" >
+	<div id="kmoubus-header" >
 		<span class="nowTime"></span> | 다음 순환버스 <span class="nextShuttleRemaining"></span>분 남음 | 다음 190번 시내버스 <span class=next190Remaining></span>분 남음
 	</div>
 
@@ -43,17 +43,19 @@
 	</div>
 
 <!--아래의 클래스 이름을 사용-->
-	<ul>
-		<li class="nowTime"></li>
-		<li class="nextShuttle"></li>
-		<li class="nextShuttleRemaining"></li>
-		<li class="nNextShuttle"></li>
-		<li class="nNextShuttleRemaining"></li>
-		<li class="next190"></li>
-		<li class="next190Remaining"></li>
-		<li class="nNext190"></li>
-		<li class="nNext190Remaining"></li>
-	</ul>
+	<div id="loadTest">
+		<ul>
+			<li class="nowTime"></li>
+			<li class="nextShuttle"></li>
+			<li class="nextShuttleRemaining"></li>
+			<li class="nNextShuttle"></li>
+			<li class="nNextShuttleRemaining"></li>
+			<li class="next190"></li>
+			<li class="next190Remaining"></li>
+			<li class="nNext190"></li>
+			<li class="nNext190Remaining"></li>
+		</ul>
+	</div>
 
 	<footer><p><i>- 위 정보는 한국해양대학교 홈페이지의 버스 시간표를 참고하였으며,
 		실제 운행과 다를 수 있습니다. KMOU 버스 도우미에서 제공하는 정보를 사용하여
@@ -62,5 +64,7 @@
 <!--KMOUBUS에 필요한 스크립트-->
 	<script src="timeArray.js"></script>
 	<script src="kmoubus.js"></script>
+
+
 </body>
 </html>
