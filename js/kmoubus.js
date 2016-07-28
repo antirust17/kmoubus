@@ -1,9 +1,9 @@
 window.onload = function() {
-	funcKMOUBUS();
-	kmoubusLoadTable();
+	kmoubusMain();
+	kmoubusLoadHTML('http://antirust.tk/kmoubus/kmoubus-table.html');
 }
 
-function funcKMOUBUS(){
+function kmoubusMain(){
 	now = new Date();
 	nowYear = now.getFullYear();
 	nowMonth = now.getMonth() + 1;
@@ -48,42 +48,42 @@ function funcKMOUBUS(){
 		cityLoop++;
 
 	//현재시간 출력
-	for (i=0;i<document.getElementsByClassName("nowTime").length;i++)
-		document.getElementsByClassName("nowTime")[i].innerHTML = nowYear + "." + addZero(nowMonth) + "." + addZero(nowDay) + ". " + nowWeekText[nowWeek]
+	for (i=0;i<document.getElementsByClassName("kmoubus-nowTime").length;i++)
+		document.getElementsByClassName("kmoubus-nowTime")[i].innerHTML = nowYear + "." + addZero(nowMonth) + "." + addZero(nowDay) + ". " + nowWeekText[nowWeek]
 														+ " " + addZero(nowHour)+":"+addZero(nowMin)+":"+addZero(nowSec);
 	//다음 순환버스 출발시간 출력
-	for (i=0;i<document.getElementsByClassName("nextShuttle").length;i++)
-		document.getElementsByClassName("nextShuttle")[i].innerHTML = addZero(arrShuttle[shuttleLoop].getHours()) + ":" + addZero(arrShuttle[shuttleLoop].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nextShuttle").length;i++)
+		document.getElementsByClassName("kmoubus-nextShuttle")[i].innerHTML = addZero(arrShuttle[shuttleLoop].getHours()) + ":" + addZero(arrShuttle[shuttleLoop].getMinutes()) ;
 	
 	//다음 순환버스 출발시간까지 남은시간 출력
-	for (i=0;i<document.getElementsByClassName("nextShuttleRemaining").length;i++)
-		document.getElementsByClassName("nextShuttleRemaining")[i].innerHTML = Math.floor( (arrShuttle[shuttleLoop].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nextShuttleRemaining").length;i++)
+		document.getElementsByClassName("kmoubus-nextShuttleRemaining")[i].innerHTML = Math.floor( (arrShuttle[shuttleLoop].getTime() - now.getTime()) / 60000 )  ;
 
 	//그 다음 순환버스 출발시간 출력
-	for (i=0;i<document.getElementsByClassName("nNextShuttle").length;i++)
-		document.getElementsByClassName("nNextShuttle")[i].innerHTML = addZero(arrShuttle[shuttleLoop+1].getHours()) + ":" + addZero(arrShuttle[shuttleLoop+1].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nNextShuttle").length;i++)
+		document.getElementsByClassName("kmoubus-nNextShuttle")[i].innerHTML = addZero(arrShuttle[shuttleLoop+1].getHours()) + ":" + addZero(arrShuttle[shuttleLoop+1].getMinutes()) ;
 	
 	//그 다음 순환버스 출발까지 남은시간 출력
-	for (i=0;i<document.getElementsByClassName("nNextShuttleRemaining").length;i++)
-		document.getElementsByClassName("nNextShuttleRemaining")[i].innerHTML = Math.floor( (arrShuttle[shuttleLoop+1].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nNextShuttleRemaining").length;i++)
+		document.getElementsByClassName("kmoubus-nNextShuttleRemaining")[i].innerHTML = Math.floor( (arrShuttle[shuttleLoop+1].getTime() - now.getTime()) / 60000 )  ;
 
 	//다음 190번 시내버스 출발시간 출력
-	for (i=0;i<document.getElementsByClassName("next190").length;i++)
-		document.getElementsByClassName("next190")[i].innerHTML = addZero(arr190[cityLoop].getHours()) + ":" + addZero(arr190[cityLoop].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-next190").length;i++)
+		document.getElementsByClassName("kmoubus-next190")[i].innerHTML = addZero(arr190[cityLoop].getHours()) + ":" + addZero(arr190[cityLoop].getMinutes()) ;
 	
 	//다음 190번 시내버스 출발까지 남은시간 출력
-	for (i=0;i<document.getElementsByClassName("next190Remaining").length;i++)
-		document.getElementsByClassName("next190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-next190Remaining").length;i++)
+		document.getElementsByClassName("kmoubus-next190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop].getTime() - now.getTime()) / 60000 )  ;
 
 	//그 다음 190번 시내버스 출발시간 출력	
-	for (i=0;i<document.getElementsByClassName("nNext190").length;i++)
-		document.getElementsByClassName("nNext190")[i].innerHTML = addZero(arr190[cityLoop+1].getHours()) + ":" + addZero(arr190[cityLoop+1].getMinutes()) ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nNext190").length;i++)
+		document.getElementsByClassName("kmoubus-nNext190")[i].innerHTML = addZero(arr190[cityLoop+1].getHours()) + ":" + addZero(arr190[cityLoop+1].getMinutes()) ;
 	//그 다음 190번 시내버스 출발까지 남은시간 출력
-	for (i=0;i<document.getElementsByClassName("nNext190Remaining").length;i++)
-		document.getElementsByClassName("nNext190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop+1].getTime() - now.getTime()) / 60000 )  ;
+	for (i=0;i<document.getElementsByClassName("kmoubus-nNext190Remaining").length;i++)
+		document.getElementsByClassName("kmoubus-nNext190Remaining")[i].innerHTML = Math.floor( (arr190[cityLoop+1].getTime() - now.getTime()) / 60000 )  ;
 	
 	//0.5초마다 갱신
-	setTimeout(funcKMOUBUS, 500);
+	setTimeout(kmoubusMain, 500);
 }
 
 function addZero(i){//숫자 두 자리 표기를 위함
@@ -92,6 +92,15 @@ function addZero(i){//숫자 두 자리 표기를 위함
 }
 
 
-function kmoubusLoadTable(){
-	document.getElementById("kmoubus-table").innerHTML='source';
+
+function kmoubusLoadHTML(url) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function() {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById("kmoubus-table").innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", url, true);
+	xhttp.send();
 }
+    
