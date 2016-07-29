@@ -1,6 +1,6 @@
 window.onload = function() {
 	kmoubusMain();
-	kmoubusLoadHTML('kmoubus-table.html');
+	kmoubusLoadHTML('http://antirust.tk/kmoubus/kmoubus-table.html');
 }
 
 function kmoubusMain(){
