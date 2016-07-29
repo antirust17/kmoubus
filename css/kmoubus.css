@@ -1,0 +1,81 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+body {
+    font-family: 'Nanum Gothic', serif;
+    margin:0;
+    color: #999999;
+    background: #1C1C1C;
+}
+
+nav ul {
+    text-align: center;
+    list-style-type:none;
+}
+nav ul li {
+    display:inline-block;
+    padding: 0px 2px 0px 2px;
+    margin: 0px 5px 0px 5px;
+    border-left: 1px solid #c0c0c0;
+    border-right: 1px solid #c0c0c0;
+}
+
+footer {
+    background: gray;
+    color: black;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+h1 small {
+    font-size:0.25em;
+    vertical-align:1em;
+}
+
+a:link {text-decoration: none; color: #999999;}
+a:visited {text-decoration: none; color: #999999;}
+a:active {text-decoration: none; color: #999999;}
+a:hover {text-decoration: underline; color: white;}
+
+#kmoubus-header {
+    width: 100%;
+    background: gray;
+    color: white;
+    text-align: right;
+    line-height: 1.5em;
+    font-weight: bold;
+    top: 0px;
+    left: 0px;
+    margin-bottom: 1em;
+}
+
+.kmoubus-circle {
+    margin: 10px auto 10px auto;
+    width:300px;
+    height:300px;
+    border-radius:50%;
+    background:gray;
+    color:white;
+    display:table;
+}
+
+.kmoubus-circle-inner {
+    text-align: center;
+    vertical-align: middle;
+    display:table-cell;
+}
+
+.kmoubus-shadow {
+    text-shadow: 1px 1px 4px black;
+}
+
+div.kmoubus-circle h1 {
+    line-height: 00%;
+    font-size:4em;
+    letter-spacing: -2px;
+}
+
