@@ -1,6 +1,8 @@
 window.onload = function() {
 	kmoubusMain();
-	kmoubusLoadHTML("kmoubus-header",'http://antirust.tk/kmoubus/kmoubus-header.html');
+	kmoubusLoadHTML("kmoubus-header",'kmoubus/kmoubus-header.html');
+	kmoubusLoadHTML("kmoubus-table",'kmoubus/kmoubus-table.html');
+
 }
 
 function kmoubusMain(){
@@ -92,7 +94,11 @@ function addZero(i){//숫자 두 자리 표기를 위함
 }
 
 
-
+/*
+function kmoubusLoadHTML(selector, URL) {
+	$(selector).load(URL)
+}
+ */
 function kmoubusLoadHTML(id, url) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
@@ -103,4 +109,5 @@ function kmoubusLoadHTML(id, url) {
 	xhttp.open("GET", url, true);
 	xhttp.send();
 }
-    
+
+
