@@ -1,6 +1,6 @@
 window.onload = function() {
 	kmoubusMain();
-	kmoubusLoadHTML('http://antirust.tk/kmoubus/kmoubus-table.html');
+	kmoubusLoadHTML("kmoubus-header",'http://antirust.tk/kmoubus/kmoubus-header.html');
 }
 
 function kmoubusMain(){
@@ -93,11 +93,11 @@ function addZero(i){//숫자 두 자리 표기를 위함
 
 
 
-function kmoubusLoadHTML(url) {
+function kmoubusLoadHTML(id, url) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
-			document.getElementById("kmoubus-table").innerHTML = xhttp.responseText;
+			document.getElementById(id).innerHTML = xhttp.responseText;
 		}
 	};
 	xhttp.open("GET", url, true);
