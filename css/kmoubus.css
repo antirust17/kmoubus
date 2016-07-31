@@ -6,11 +6,17 @@ body {
     background: #1C1C1C;
 }
 
-nav ul {
+nav {
     text-align: center;
-    list-style-type:none;
 }
-nav ul li {
+
+ ul {
+    text-align: center;
+    display: inline;
+    margin:0px;
+    padding:0px;
+}
+ul li {
     display:inline-block;
     padding: 0px 2px 0px 2px;
     margin: 0px 5px 0px 5px;
