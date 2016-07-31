@@ -1,0 +1,38 @@
+
+.kmoubus-table {
+    color:black;
+    background-color:white;
+    width:200px;
+    text-align: center;
+    overflow: auto;
+    border:1px solid black;
+    position:absolute;
+   
+}
+
+ .kmoubus-table-left, .kmoubus-table-right {
+    border-bottom: 1px solid black;
+    width: 50%;
+}
+ .kmoubus-table-middle{
+    border: 1 solid black;
+    width: 100%;
+}
+.kmoubus-table-left {
+    margin-right:-1px;     
+    float:left; 
+}
+
+.kmoubus-table-right {
+   float:right; 
+   border-left: 1px solid black;
+
+}
+
+.kmoubus-yellow{
+    background-color: yellow;
+}
+
+.kmoubus-skyblue{
+    background-color: skyblue;
+}
