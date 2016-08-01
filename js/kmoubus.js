@@ -1,6 +1,7 @@
 window.onload = function() {
 	kmoubusMain();
 	kmoubusLoadHTML("kmoubus-header",'kmoubus/kmoubus-header.html');
+	kmoubusLoadHTML("kmoubus-mobile-header",'kmoubus/kmoubus-mobile-header.html');
 	kmoubusLoadHTML("kmoubus-table",'kmoubus/kmoubus-table.html');
 
 }
