@@ -42,8 +42,8 @@ h1 small {
     vertical-align:1em;
 }
 
-a:link {text-decoration: none; color: #999999;}
-a:visited {text-decoration: none; color: #999999;}
+a:link {text-decoration: none; color: #EEEEEE;}
+a:visited {text-decoration: none; color: #808080;}
 a:active {text-decoration: none; color: #999999;}
 a:hover {text-decoration: underline; color: white;}
 
