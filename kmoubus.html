@@ -4,28 +4,26 @@
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!--KMOUBUS 스타일시트-->
-	<link rel="stylesheet" href="kmoubus/css/kmoubus.css">
-	<link rel="stylesheet" href="kmoubus/css/kmoubus-archisum-header.css">
-	<link rel="stylesheet" href="kmoubus/css/kmoubus-archisum-table.css">
+	<link rel="stylesheet" href="css/kmoubus.css">
 	<title>KMOUBUS</title>	
 </head>
 <body>
 	<div id=kmoubus-container style="margin:auto;" >
 		<div id=kmoubus-topbox style="width:100%; height:200px; margin:auto; position:absolute; ">
-			<div id="kmoubus-header"></div>
-			<div id="kmoubus-mobile-header"></div>
 			<div id="kmoubus-table"></div>
 				<h1 class="kmoubus-shadow" style="">KMOU 버스 도우미</h1>
 				<nav>
+					<div style="text-align:center"><a href="http://antirust.tk/kmoubus/kmoubus-addHome.html"><small>브라우저의 '<u>홈 화면에 추가</u>'기능으로 바로가기를 만드세요</small></a></div>
 					<ul>
 						<li><a href="http://www.kmou.ac.kr/01intro/05_03_05.jsp">전체 버스 시간표</a></li>
-						<li><a href="http://archisum.net/">불편 신고</a></li>
+						<li><a href="http://archisum.net/me_911">불편 신고</a></li>
 						<li><a href="mailto:antirust17@gmail.com">도우미 관련 문의</a></li>
 					</ul>
 				</nav>
 			<hr>
 		</div>
-		<div id="kmoubus-body" style="padding-top:200px">
+		<div id="kmoubus-body" style="padding-top:130px">
+
 			<div class="kmoubus-circle kmoubus-shadow" >
 				<div class="kmoubus-circle-inner">
 				다음 순환버스
@@ -50,14 +48,17 @@
 		
 	</div><!--container end-->
 
-	<footer><p><i>- 위 정보는 한국해양대학교 홈페이지의 버스 시간표를 참고하였으며,
+	<footer><p><i><small>- 위 정보는 한국해양대학교 홈페이지의 버스 시간표를 참고하였으며,
 		실제 운행과 다를 수 있습니다. KMOU 버스 도우미에서 제공하는 정보를 사용하여
-		발생하는 모든 결과에 대한 책임은 이용자 본인에게 있습니다. - </i></p></footer>
-
+		발생하는 모든 결과에 대한 책임은 이용자 본인에게 있습니다. -</small></i></p></footer>
+<!--아치섬 PC버전
+	<div id="kmoubus-header"></div>-->
+<!--아치섬 모바일버전
+	<div id="kmoubus-mobile-header"></div>-->
 <!--KMOUBUS에 필요한 스크립트-->
-	<script src="kmoubus/js/kmoubus-timeArray.js"></script>
-	<script src="kmoubus/js/kmoubus.js"></script>
-	<script src="kmoubus/js/jquery-3.1.0.js"></script> 
+	<script src="js/kmoubus-timeArray.js"></script>
+	<script src="js/kmoubus.js"></script>
+	<script src="js/jquery-3.1.0.js"></script> 
 
 </body>
 </html>
