@@ -1,4 +1,9 @@
-#kmoubus-header, #kmoubus-mobile-header{
+#kmoubus-mobile-header{
     text-align: center;
-    width:100%;
+}
+#kmoubus-header{
+    position:absolute;
+    right:0px;
+    padding-right:340px;
+    padding-top:3px;
 }
