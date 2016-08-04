@@ -1,6 +1,12 @@
 #kmoubus-mobile-header{
     text-align: center;
 }
+
+#kmoubus-mobile-header a:link {text-decoration: none; color: #ffffff;}
+#kmoubus-mobile-header a:visited {text-decoration: none; color: #ffffff;}
+#kmoubus-mobile-header a:active {text-decoration: none; color: #ffffff;}
+#kmoubus-mobile-header a:hover {text-decoration: none; color: #ffffff;}
+
 #kmoubus-header{
     position:absolute;
     right:0px;
