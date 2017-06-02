@@ -3,12 +3,19 @@
 <head>
 	<meta http-equiv="content-type" content="text/html" charset="UTF-8">
 	<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width, height=device-height">
+	<meta name="apple-mobile-web-app-capable" content="yes">
 	<!--KMOUBUS 스타일시트-->
 	<link rel="stylesheet" href="css/kmoubus.css">
 	<title>KMOUBUS</title>
 	<link rel="icon"       type="image/png"      href="/img/bus.png" />
 </head>
 <body>
+	<!--주소창숨기기-->
+	<script>
+		window.addEventListener('load', function(){
+    			setTimeout(scrollTo, 0, 0, 1);
+		}, false);
+	</script>
 	<div id=kmoubus-container style="margin:auto;" >
 		<div id=kmoubus-topbox style="width:100%; margin:auto; position:absolute; ">
 			<div id="kmoubus-table"></div>
