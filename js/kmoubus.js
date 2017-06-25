@@ -21,7 +21,7 @@ function kmoubusMain(){
 	now.setMonth(arr1[1].getMonth());
 	now.setDate(arr1[1].getDate());
 	
-	nowVacation = false; //방학일경우 true, 학기중이면 false
+	nowVacation = true; //방학일경우 true, 학기중이면 false
 
 	//순환버스용 요일, 방학 여부 판단
 	if (nowWeek == 0 || nowWeek == 6) 
